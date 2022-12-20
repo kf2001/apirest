@@ -3,7 +3,6 @@ const url = require("url");
 const express = require('express');
 const fs = require("fs")
 const path = require("path")
-var _ = require("underscore")
 
 const porta = 8888
 const app = express();
