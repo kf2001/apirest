@@ -1,0 +1,302 @@
+[
+    {
+        "id": 0,
+        "descrizione": "Brown eggs",
+        "categoria": "dairy",
+        "prezzo": 28.1
+    },
+    {
+        "id": 1,
+        "descrizione": "Sweet fresh stawberry",
+        "categoria": "fruit",
+        "prezzo": 29.45
+    },
+    {
+        "id": 2,
+        "descrizione": "Asparagus",
+        "categoria": "vegetable",
+        "prezzo": 18.95
+    },
+    {
+        "id": 3,
+        "descrizione": "Green smoothie",
+        "categoria": "dairy",
+        "prezzo": 17.68
+    },
+    {
+        "id": 4,
+        "descrizione": "Raw legums",
+        "categoria": "vegetable",
+        "prezzo": 17.11
+    },
+    {
+        "id": 5,
+        "descrizione": "Baking cake",
+        "categoria": "dairy",
+        "prezzo": 11.14
+    },
+    {
+        "id": 6,
+        "descrizione": "Pesto with basil",
+        "categoria": "vegetable",
+        "prezzo": 18.19
+    },
+    {
+        "id": 7,
+        "descrizione": "Hazelnut in black ceramic bowl",
+        "categoria": "vegetable",
+        "prezzo": 27.35
+    },
+    {
+        "id": 8,
+        "descrizione": "Fresh stawberry",
+        "categoria": "fruit",
+        "prezzo": 28.59
+    },
+    {
+        "id": 9,
+        "descrizione": "Lemon and salt",
+        "categoria": "fruit",
+        "prezzo": 15.79
+    },
+    {
+        "id": 10,
+        "descrizione": "Homemade bread",
+        "categoria": "bakery",
+        "prezzo": 17.48
+    },
+    {
+        "id": 11,
+        "descrizione": "Legums",
+        "categoria": "vegetable",
+        "prezzo": 14.77
+    },
+    {
+        "id": 12,
+        "descrizione": "Fresh tomato",
+        "categoria": "vegetable",
+        "prezzo": 16.3
+    },
+    {
+        "id": 13,
+        "descrizione": "Healthy breakfast",
+        "categoria": "fruit",
+        "prezzo": 13.02
+    },
+    {
+        "id": 14,
+        "descrizione": "Green beans",
+        "categoria": "vegetable",
+        "prezzo": 28.79
+    },
+    {
+        "id": 15,
+        "descrizione": "Baked stuffed portabello mushrooms",
+        "categoria": "bakery",
+        "prezzo": 20.31
+    },
+    {
+        "id": 16,
+        "descrizione": "Strawberry jelly",
+        "categoria": "fruit",
+        "prezzo": 14.18
+    },
+    {
+        "id": 17,
+        "descrizione": "Pears juice",
+        "categoria": "fruit",
+        "prezzo": 19.49
+    },
+    {
+        "id": 18,
+        "descrizione": "Fresh pears",
+        "categoria": "fruit",
+        "prezzo": 15.12
+    },
+    {
+        "id": 19,
+        "descrizione": "Caprese salad",
+        "categoria": "vegetable",
+        "prezzo": 16.76
+    },
+    {
+        "id": 20,
+        "descrizione": "Oranges",
+        "categoria": "fruit",
+        "prezzo": 21.48
+    },
+    {
+        "id": 21,
+        "descrizione": "Vegan food",
+        "categoria": "vegetable",
+        "prezzo": 29.66
+    },
+    {
+        "id": 22,
+        "descrizione": "Breakfast with muesli",
+        "categoria": "dairy",
+        "prezzo": 22.7
+    },
+    {
+        "id": 23,
+        "descrizione": "Honey",
+        "categoria": "bakery",
+        "prezzo": 17.01
+    },
+    {
+        "id": 24,
+        "descrizione": "Breakfast with cottage",
+        "categoria": "fruit",
+        "prezzo": 14.05
+    },
+    {
+        "id": 25,
+        "descrizione": "Strawberry smoothie",
+        "categoria": "fruit",
+        "prezzo": 28.86
+    },
+    {
+        "id": 26,
+        "descrizione": "Strawberry and mint",
+        "categoria": "fruit",
+        "prezzo": 26.21
+    },
+    {
+        "id": 27,
+        "descrizione": "Ricotta",
+        "categoria": "dairy",
+        "prezzo": 27.81
+    },
+    {
+        "id": 28,
+        "descrizione": "Cuban sandwiche",
+        "categoria": "bakery",
+        "prezzo": 18.5
+    },
+    {
+        "id": 29,
+        "descrizione": "Granola",
+        "categoria": "dairy",
+        "prezzo": 29.97
+    },
+    {
+        "id": 30,
+        "descrizione": "Smoothie with chia seeds",
+        "categoria": "fruit",
+        "prezzo": 25.26
+    },
+    {
+        "id": 31,
+        "descrizione": "Yogurt",
+        "categoria": "dairy",
+        "prezzo": 27.61
+    },
+    {
+        "id": 32,
+        "descrizione": "Sandwich with salad",
+        "categoria": "vegetable",
+        "prezzo": 22.48
+    },
+    {
+        "id": 33,
+        "descrizione": "Cherry",
+        "categoria": "fruit",
+        "prezzo": 14.35
+    },
+    {
+        "id": 34,
+        "descrizione": "Raw asparagus",
+        "categoria": "vegetable",
+        "prezzo": 22.97
+    },
+    {
+        "id": 35,
+        "descrizione": "Corn",
+        "categoria": "vegetable",
+        "prezzo": 13.55
+    },
+    {
+        "id": 36,
+        "descrizione": "Vegan",
+        "categoria": "vegan",
+        "prezzo": 28.96
+    },
+    {
+        "id": 37,
+        "descrizione": "Fresh blueberries",
+        "categoria": "fruit",
+        "prezzo": 21.01
+    },
+    {
+        "id": 38,
+        "descrizione": "Smashed avocado",
+        "categoria": "fruit",
+        "prezzo": 25.88
+    },
+    {
+        "id": 39,
+        "descrizione": "Italian ciabatta",
+        "categoria": "bakery",
+        "prezzo": 15.18
+    },
+    {
+        "id": 40,
+        "descrizione": "Rustic breakfast",
+        "categoria": "dairy",
+        "prezzo": 21.32
+    },
+    {
+        "id": 41,
+        "descrizione": "Sliced lemons",
+        "categoria": "fruit",
+        "prezzo": 27.14
+    },
+    {
+        "id": 42,
+        "descrizione": "Plums",
+        "categoria": "fruit",
+        "prezzo": 19.18
+    },
+    {
+        "id": 43,
+        "descrizione": "French fries",
+        "categoria": "bakery",
+        "prezzo": 18.32
+    },
+    {
+        "id": 44,
+        "descrizione": "Strawberries",
+        "categoria": "fruit",
+        "prezzo": 15.13
+    },
+    {
+        "id": 45,
+        "descrizione": "Ground beef meat burger",
+        "categoria": "meat",
+        "prezzo": 11.73
+    },
+    {
+        "id": 46,
+        "descrizione": "Tomatoes",
+        "categoria": "fruit",
+        "prezzo": 26.03
+    },
+    {
+        "id": 47,
+        "descrizione": "Basil",
+        "categoria": "vegetable",
+        "prezzo": 15.19
+    },
+    {
+        "id": 48,
+        "descrizione": "Fruits bouquet",
+        "categoria": "fruit",
+        "prezzo": 18.18
+    },
+    {
+        "id": 49,
+        "descrizione": "Peaches on branch",
+        "categoria": "fruit",
+        "prezzo": 25.62
+    }
+]

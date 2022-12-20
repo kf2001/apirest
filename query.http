@@ -1,0 +1,54 @@
+
+###  lista prodotti
+
+GET http://localhost:8888/prodotti HTTP/1.1
+
+###  lista categorie
+
+GET http://localhost:8888/categorie HTTP/1.1
+
+###  scheda prodotti
+
+GET http://localhost:8888/prodotto/45 HTTP/1.1
+
+###  top N
+
+GET http://localhost:8888/top/10 HTTP/1.1
+
+
+###  prodotti per categoria
+
+GET http://localhost:8888/prodottipercategoria/vegan HTTP/1.1
+
+
+###    aggiungi prodotto
+
+POST http://localhost:8888/aggiungi HTTP/1.1
+content-type: application/json
+
+{
+    "descrizione": "gallette riso",
+    "prezzo": 15.0, 
+    "categoria":"vegan"
+
+}
+
+###  aggiorna 1° modo
+
+PUT http://localhost:8888/aggiorna HTTP/1.1
+content-type: application/json
+
+{
+    "idprodotto": 40,
+    "prezzo": 15.87
+}
+
+### aggiorna 2° modo
+
+PUT http://localhost:8888/aggiorna/45/16.0 HTTP/1.1
+
+
+### elimina prodotto
+
+DELETE http://localhost:8888/elimina/3 HTTP/1.1
+

@@ -1,0 +1,38 @@
+body {
+
+    font-size: 22px;
+}
+
+ul {
+
+list-style-type: none;
+
+}
+
+label {
+
+   color:blue;
+   padding-left:26px;
+    width:125px;
+    text-transform:capitalize;
+    display:inline-block
+
+}
+
+table {border-collapse: collapse;margin: 40px;}
+
+td, th {font-size:smaller;padding: 3px;}
+
+#contenitore
+
+{
+    display:flex;
+    flex-direction: row;
+
+
+}
+
+#lefts {flex-grow: 1;}
+#menu {}
+
+#results {flex-grow: 2;}

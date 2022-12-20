@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Prodotti</title>
+</head>
+
+<body>
+
+    <div id="contenitore">
+
+
+        <div id="lefts">
+            <div id="menu">
+
+                <ul>
+
+                    <li><button onclick="prodotti()">Elenco prodotti</button></li>
+                    <li> <button onclick="categorie()">Elenco categorie</button></li>
+                    <li> <button onclick="top10()">Top 10</button></li>
+
+                </ul>
+
+            </div>
+            <div id="formd">
+
+                <h3>Nuovo prodotto</h3>
+
+                <form method="POST" action="/aggiungi">
+
+                    <label for="descrizione">descrizione</label> <input name="descrizione" type="text" /><br />
+                    <label for="prezzo">prezzo</label> <input name="prezzo" type="number" step="0.25"
+                        value="4.5" /><br />
+                    <label for="categoria">categoria</label>
+                    <select id="selcat" name="categoria">
+
+
+
+                    </select><br />
+                    <input type="submit" value="CREA!" />
+
+                </form>
+            </div>
+
+        </div>
+
+
+
+        <div id="result">
+
+        </div>
+    </div>
+
+    <script>
+
+
+        let categ = []
+        getcateg()
+
+
+        function populateSelect(arr) {
+
+            let selc = document.getElementById("selcat")
+
+            arr.forEach((a, idx) => {
+                let option = document.createElement("option");
+                option.value = a;
+                option.text = a;
+                selc.add(option);
+
+            })
+
+
+
+        }
+
+        async function getcateg() {
+
+            let response = await fetch('http://127.0.0.1:8888/categorie');
+
+            if (response.ok) { // se l'HTTP-status è 200-299
+
+
+                let categ = await response.json();
+
+                populateSelect(categ.toString().split(","))
+
+
+            }
+
+
+        }
+
+
+        function mostrascheda(json_) {
+
+            let strhtml = "<table border=1>"
+            strhtml += '<tr><th>id</th><th>descrizione</th><th>prezzo</th><th>categoria</th></tr>'
+
+            let arr = json_ // JSON.parse(json_)
+
+            el = arr
+
+            strhtml += '<tr><td>' + el.id + '</td><td>' + el.descrizione + '</td>' + '<td>' + el.prezzo + '</td>' + '<td>' + el.categoria + '</td>' + '</tr>'
+
+
+
+            strhtml += '</table/>'
+
+            document.getElementById("result").innerHTML = strhtml
+
+
+        }
+
+
+
+        function mostraprodotti(json_) {
+
+            let strhtml = "<table border=1>"
+            strhtml += '<tr><th>id</th><th>descrizione</th><th>prezzo</th><th>categoria</th></tr>'
+
+            let arr = json_ // JSON.parse(json_)
+
+            arr.forEach(el => {
+
+                strhtml += '<tr><td>' + el.id + '</td><td>' + el.descrizione + '</td>' + '<td>' + el.prezzo + '</td>' + '<td>' + el.categoria + '</td>' + '<td><button onclick="scheda(' + el.id + ')">scheda</button></td>' + '<td><button onclick="elimina(' + el.id + ')">X</button></td></tr>'
+
+            });
+
+            strhtml += '</table/>'
+
+            document.getElementById("result").innerHTML = strhtml
+
+
+        }
+
+
+        function mostracategorie(json_) {
+
+            let strhtml = "<table border=1>"
+            strhtml += '<tr><th>categoria</th></tr>'
+
+            let arr = json_ // JSON.parse(json_)
+
+            arr.forEach(el => {
+
+                strhtml += '<tr><td>' + el + '</td><td><button onclick="prodottiCategoria(\'' + el + '\')">prodotti</button></td>' + '</tr>'
+
+            });
+
+            strhtml += '</table/>'
+
+            document.getElementById("result").innerHTML = strhtml
+
+
+        }
+        async function prodotti() {
+
+            let response = await fetch('http://127.0.0.1:8888/prodotti');
+
+            if (response.ok) { // se l'HTTP-status è 200-299
+
+                let json = await response.json();
+                mostraprodotti(json)
+            } else {
+                alert("HTTP-Error: " + response.status);
+            }
+
+
+        }
+
+        async function categorie() {
+
+            let response = await fetch('http://127.0.0.1:8888/categorie');
+
+            if (response.ok) { // se l'HTTP-status è 200-299
+
+                let vett = await response.json();
+
+                mostracategorie(vett)
+            } else {
+                alert("HTTP-Error: " + response.status);
+            }
+
+
+        }
+
+        async function top10() {
+
+            let response = await fetch('http://127.0.0.1:8888/top/10');
+
+            if (response.ok) { // se l'HTTP-status è 200-299
+
+                let json = await response.json();
+                mostraprodotti(json)
+            } else {
+                alert("HTTP-Error: " + response.status);
+            }
+
+
+        }
+
+        async function prodottiCategoria(cate) {
+
+
+            let response = await fetch('http://127.0.0.1:8888/prodottipercategoria/' + cate);
+
+            if (response.ok) { // se l'HTTP-status è 200-299
+
+                let json = await response.json();
+                mostraprodotti(json)
+            } else {
+                alert("HTTP-Error: " + response.status);
+            }
+
+
+        }
+
+        async function scheda(id) {
+
+            let response = await fetch('http://127.0.0.1:8888/prodotto/' + id);
+
+            if (response.ok) { // se l'HTTP-status è 200-299
+
+                let json = await response.json();
+                mostrascheda(json)
+            } else {
+                alert("HTTP-Error: " + response.status);
+            }
+
+
+        }
+
+        async function elimina(id) {
+
+
+
+            fetch('http://127.0.0.1:8888/elimina/' + id, {
+                method: "DELETE",
+                headers: { "Content-type": "application/json;charset=UTF-8" }
+            })
+                .then(response => response.json())
+                .then(json => console.log(json))
+                .catch(err => console.log(err));
+
+            /* let response = await fetch('http://127.0.0.1:8888/prodotto/' + id);
+            
+            if (response.ok) { // se l'HTTP-status è 200-299
+            
+                let json = await response.json();
+                mostrascheda(json)
+            } else {
+                alert("HTTP-Error: " + response.status);
+            } */
+
+
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
